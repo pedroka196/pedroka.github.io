@@ -1,10 +1,11 @@
 ---
-layout: splash
+layout: category
+title: Publicações
+permalink: /publicacoes/
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/FundoIFI.svg
 ---
-
-{{ content }}
-
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
