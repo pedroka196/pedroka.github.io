@@ -1,0 +1,109 @@
+/* CSS para o texto do estudo
+-----------------------------------------------------------------------------*/
+
+h1, h2, h3, h4, h5 {
+	font-family: Calibri;
+}
+
+body {
+	font-family: Cambria;
+	text-align: justify;
+}
+
+.rodape_graf {
+	font-family: Cambria;	
+	font-size: 12px;
+	font-weight: bold;
+	text-align: justify;
+	width: 500px;
+	margin: auto;
+	font-style: italic;
+}
+
+/* CSS para as tabelas do estudo
+-----------------------------------------------------------------------------*/
+
+.titulo_tab {
+	font-family: Calibri;
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: justify;
+	line-height: 1.2;
+}
+
+.rodape_tab {
+	font-family: Cambria;	
+	font-size: 12px;
+	text-align: justify;
+	width: 100%;
+	font-style: italic;
+}
+
+.tabelaifi {
+	margin-left: auto;
+  margin-right: auto;
+}
+
+.tabelaifi tr {
+	font-family: Cambria;
+	color: #000000;
+}
+
+.tabelaifi th {
+	background-color: #005D89;
+	color: #FFFFFF;
+	font-family: Calibri;
+	padding: 5px;
+	text-align: center;
+}
+
+.tabelaifi tr:nth-child(even) { 
+	background: #eee; 
+}
+
+.tabelaifi tr:hover {
+	background-color: #ddd;
+}
+
+/* CSS para os gráficos
+-----------------------------------------------------------------------------*/
+
+.titulo_graf {
+	font-family: Calibri;
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.2;
+}
+
+.dygraph-legend > span {
+	display: none;
+}
+
+.dygraph-legend > span.highlight {
+	display: inline;
+	/*border: 2px solid grey;*/
+}
+
+.dygraphs {
+	margin-right:200px;
+	margin-left:50px;
+}
+
+.dygraph-title {
+	font-family: Calibri;
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: justify;
+	line-height: 1.2;
+}
+
+.barras {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}

@@ -6,3 +6,206 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.toc__menu{
+  font-size: 1em;
+}
+.toc__menu li ul li ul > li a {
+  font-size: 1em;
+  padding-left: 2.5rem;
+}
+
+.toc__menu li ul li ul li ul > li a {
+  padding-left: 3rem;
+}
+
+.toc__menu li ul li ul li ul li ul > li a {
+  padding-left: 3.5rem;
+}
+
+.sidebar__right {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: sticky !important; /* added to make toc scroll with page */
+    float: left !important; /* added to make toc scroll with page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-right: -1 * $right-sidebar-width-narrow;
+    padding-left: 1em;
+    padding-top: 1em !important; /* added to make toc scroll with page */
+    z-index: 10;
+
+    &.sticky {
+      @include clearfix();
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+      float: left;
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: 100%;
+  }
+}
+
+.splash .sidebar__right {
+  @include breakpoint($large) {
+    position: relative;
+    float: left;
+    margin-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    margin-right: 0;
+  }
+}
+
+.wide .sidebar__right {
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    position: fixed;
+    top: 16.2rem;
+    right: left;
+    width: 100%;
+    margin-right: initial;
+    padding-left: initial;
+    z-index: initial;
+
+    &.sticky {
+      float: left;
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: 100%;
+    margin-right: initial;
+  }
+}
+
+/* SIDEBAR */
+.sidebar {
+  @include clearfix();
+  // @include breakpoint(max-width $large) {
+  //   /* fix z-index order of follow links */
+  //   position: relative;
+  //   z-index: 10;
+  //   -webkit-transform: translate3d(0, 0, 0);
+  //   transform: translate3d(0, 0, 0);
+  // }
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: auto;
+
+  @include breakpoint($large) {
+    left: 0;
+    width: calc(#{$right-sidebar-width-narrow} - 1em);
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.sticky {
+      overflow-y: auto;
+      float: left;
+      /* calculate height of nav list
+         viewport height - nav height - masthead x-padding
+      */
+      max-height: calc(100vh - #{$nav-height} - 2em);
+    }
+  }
+
+  @include breakpoint($x-large) {
+    width: $right-sidebar-width;
+  }
+
+  > * {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+    font-family: $sans-serif-narrow;
+  }
+
+  p,
+  li {
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+
+    &.emoji {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+#main{
+
+  //float: right;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint($large) {
+  &.single{
+    //float: right;
+    //vertical-align:top;
+    display: inline-block;
+    overflow:auto;
+   margin-left: auto;
+   max-width: 75%;
+  }
+}
+}
+
+
+
+.page{
+  @include breakpoint($large) {
+    overflow: auto;
+    float: left;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .page__inner-wrap {
+    float: left;
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    clear: both;
+
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      position: relative;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      clear: both;
+    }
+  }
+}

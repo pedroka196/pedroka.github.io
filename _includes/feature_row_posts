@@ -1,0 +1,11 @@
+{% if include.id %}
+  {% assign feature_row_posts = page[include.id] %}
+{% else %}
+  {% assign feature_row_posts = page.feature_row_posts %}
+{% endif %}
+
+<div class="feature__wrapper">
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
