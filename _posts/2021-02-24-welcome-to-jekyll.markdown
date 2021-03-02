@@ -5,17 +5,21 @@ title:  "Welcome to Jekyll 9"
 date:   2021-02-26 16:49:37 -0300
 author: Billy Rick
 categories: estudo-especial
-header:
-  overlay_image: /assets/images/FundoIFI.svg
-  overlay_color: "#000"
-  overlay_filter: 0.5
 toc: true
 toc_label: "Conteúdos"
 toc_icon: "cog"
 toc_sticky: true
+header:
+  image:  /assets/images/FundoIFI.svg
+  overlay_image: /assets/images/FundoIFI.svg
+  overlay_color: "#FFF"
+  overlay_filter: 0.1
 ---
 
 # Olar
+
+aaaaaa mundo cruel
+
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

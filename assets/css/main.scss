@@ -7,20 +7,54 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.toc__menu{
-  font-size: 1em;
-}
-.toc__menu li ul li ul > li a {
-  font-size: 1em;
-  padding-left: 2.5rem;
-}
+.toc__menu {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  color: black;
+  font-size: 1.5em;
+  list-style: none;
+  font-size: 0.8rem;
 
-.toc__menu li ul li ul li ul > li a {
-  padding-left: 3rem;
-}
+  a {
+    display: block;
+    padding: 0.2rem 0.2rem;
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 1px solid $border-color;
 
-.toc__menu li ul li ul li ul li ul > li a {
-  padding-left: 3.5rem;
+    &:hover {
+      color: #000;
+      background:#bbbbbb;
+    }
+  }
+
+  > li:last-child {
+    a {
+      padding-left: 0.2rem;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  li ul > li a {
+    padding-left: 0.2rem;
+    font-weight: normal;
+  }
+
+  li > ul {
+    padding-left: 0.2rem;
+  }
+
+  /* hide sub sub links on small screens*/
+  li > ul li {
+    display: none;
+
+    @include breakpoint($medium) {
+      display: block;
+    }
+  }
 }
 
 .sidebar__right {
@@ -28,7 +62,7 @@
 
   @include breakpoint($large) {
     position: sticky !important; /* added to make toc scroll with page */
-    float: left !important; /* added to make toc scroll with page */
+    float: left !important; /* added to makem toc scroll with page */
     top: 0;
     left: 0;
     width: 100%;
@@ -117,7 +151,7 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+      //max-height: calc(100vh - #{$nav-height} - 2em);
     }
   }
 
@@ -209,3 +243,16 @@
     }
   }
 }
+
+/*.author__urls-wrappe{
+  float: left;
+}*/
+/*
+.author__content{
+  background-color: aqua;
+  float: left;
+}
+
+.author__avatar{
+  float: left;
+}*/

@@ -20,13 +20,14 @@ title                    : "Instituição Fiscal Independente"
 title_separator          : "-"
 email: "ifi@senado.leg.br"
 #subtitle                 : "Site com publicações da Instituição Fiscal Independente."
-name                     : "Your Name"
+name                     : "Instituição Fiscal Independente"
 description              : "Site com publicações da Instituição Fiscal Independente."
 url                      : "https://pedroka196.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/logo_ifi.svg"
+logo_desc: "Logo da IFI"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -74,16 +75,18 @@ naver_site_verification  :
 twitter:
   username               : "ifibrasil"
 facebook:
-  username               :
-  app_id                 :
+  username               : "instituicaofiscalindependente"
+  app_id                 : 
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : "Instituição Fiscal Independente"
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  name                   : "Instituição Fiscal Independente"
+  links:
+    - "https://twitter.com/yourTwitter"
+    - "https://facebook.com/yourTwitter"
 
 # Analytics
 analytics:
@@ -125,13 +128,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/ifibrasil"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://www.facebook.com/INSTITUICAOFISCALINDEPENDENTE"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "http://github.com/ifibrasil"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -140,7 +143,13 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "http://instagram.com/ifibrasil"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/company/institui%C3%A7%C3%A3o-fiscal-independente/"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/instituiçãofiscalindependente"
 
 
 # Reading Files
@@ -185,7 +194,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "<!--->"
 incremental: false
 
 
@@ -221,6 +230,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-archives
 
 
 # mimic GitHub Pages with --safe
@@ -230,6 +240,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-archives
 
 
 # Archives
@@ -259,6 +270,7 @@ jekyll-archives:
    permalinks:
      category: /:name/
      tag: /tags/:name/
+
 
 
 # HTML Compression
